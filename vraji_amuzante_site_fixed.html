@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrăji Amuzante</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            width: 90%;
+            max-width: 300px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #6200ea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 300px;
+            box-sizing: border-box;
+        }
+        button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Introdu Vrăja Ta</h1>
+    <input type="text" id="spellInput" placeholder="Scrie aici vraja">
+    <button onclick="checkSpell()">Verifică Vrăja</button>
+
+    <script>
+        const correctSpells = [
+            "Sare pisica-n pat",
+            "Transforma sandvisul in pizza",
+            "Buburuze, zburati la mine",
+            "Aduna toti pantofii",
+            "Indoaie lingura fermecata",
+            "Fa-l sa rada pe loc",
+            "Transforma apa in suc",
+            "Blocheaza orice manusa",
+            "Invoca pizza perfecta",
+            "Raceste gheata topita",
+            "Arunca-te pe canapea",
+            "Invoca hoarde de gogosi",
+            "Incetineste ora de culcare",
+            "Fii campion la cartofi",
+            "Ascunde telecomanda magica",
+            "Scapa de ciorapii pierduti",
+            "Ofera raspuns la test",
+            "Transforma laptele in cafea",
+            "Uita lucrul de facut",
+            "Inghetata fara sfarsit",
+            "Ia-ti o pauza mica",
+            "Evadeaza rutina plictisitoare",
+            "Striga ca o vrabiuta",
+            "Atrage toate pisicile",
+            "Invoca noroc la mancare",
+            "Apare briosa magica",
+            "Incurca toate culorile",
+            "Invarte farfuria in aer",
+            "Stranuta de trei ori",
+            "Invoca dulciuri ascunse",
+            "Castiga la jocul piatra",
+            "Da-mi ciocolata instant",
+            "Opreste alarma zgomotoasa",
+            "Zboara o frunza magica",
+            "Incuie usa invizibila",
+            "Oglinda, zambeste mie",
+            "Ascunde cheile deodata",
+            "Transforma ploaia-n confeti",
+            "Aduna praf magic alb",
+            "Activeaza mod lenes",
+            "Imbratiseaza copacul mare",
+            "Bautura magica de somn",
+            "Invoca lene de sambata",
+            "Incepe sa ploua jeleuri",
+            "Bucurie fara oprire",
+            "Aroma de briosa calda",
+            "Vei gasi nori roz",
+            "Aduna toate cartile",
+            "Devina expert in ras",
+            "Sare ciocolata-n pahar"
+        ];
+
+        function checkSpell() {
+            const userInput = document.getElementById("spellInput").value.trim().toLowerCase();
+            const isCorrect = correctSpells.some(spell => spell.toLowerCase() === userInput);
+            if (isCorrect) {
+                alert("Vraja corectă!");
+            } else {
+                alert("Mai încearcă");
+            }
+        }
+    </script>
+</body>
+</html>
